@@ -1,5 +1,5 @@
 import elements from '../pageObjects/uploadImagePage'
-import assert from 'assert'
+
 
 const colors = {
     errors: 'rgb(220, 53, 69)',
@@ -31,9 +31,5 @@ const colors = {
       })
 
       Cypress.Commands.add('verify_title_color', () => {
-        cy.get(elements.titleInput).should(([element]) => {
-                const styles = window.getComputedStyle(element)
-                const border = styles.getPropertyValue('border-right-color')
-                assert.strictEqual(border, colors.errors)
-      })
+        cy.get(elements.titleInput).should("have.css", "border-right-color", colors.errors);
     })
