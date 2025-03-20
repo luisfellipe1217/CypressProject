@@ -4,10 +4,9 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'in-class-project/**.js'
-      - 'in-class-project/**.json'
-      - 'in-class-project/**.yml'
+  pull_request:
+    branches:
+      - main
 
 jobs:
   in-class-project-tests:
