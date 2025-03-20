@@ -5,9 +5,9 @@ on:
     branches:
       - main
     paths:
-      - 'in-class-project/**.js'
-      - 'in-class-project/**.json'
-      - 'in-class-project/**.yml'
+      - 'cypress/**.js'
+      - 'cypress/**.json'
+      - 'cypress/**.yml'
 
 jobs:
   in-class-project-tests:
