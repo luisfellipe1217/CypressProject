@@ -26,7 +26,7 @@ const input = {
     })
 
     Then("I should see Please type a valid URL message above the imageUrl field", () => {
-      
+      cy.verify_message_url_feedback()
     })
 
     Then('I should see an exclamation icon in the title and URL fields', () => {
