@@ -19,6 +19,7 @@
     "cypress": "^14.2.0"
   },
   "dependencies": {
+    "cypress-localstorage-commands": "^2.2.7",
     "cypressproject": "file:"
   }
 }

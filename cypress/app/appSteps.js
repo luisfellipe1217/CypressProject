@@ -1,20 +1,20 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
-const input = {
-  title: '  ',
-  url: '  '
-}
 
     Given("I am on the image registration page", function () {
       cy.open_web_page()
     })
 
-    When("I enter {string} in the title field", () => {
-      cy.insert_text_imgTitle(input.title)
+    When("I don't enter anything in the title field", function () { });
+
+    When("I don't enter anything in the URL field", function () {});
+
+    When("I enter {string} in the title field", (title) => {
+      cy.insert_text_imgTitle(title)
     })
 
-    Then("I enter {string} in the URL field", () => {
-      cy.insert_text_imgUrl(input.url)
+    Then("I enter {string} in the URL field", (imgUrl) => {
+      cy.insert_text_imgUrl(imgUrl)
     })
 
     Then("I click the submit button", () => {
@@ -32,3 +32,26 @@ const input = {
     Then('I should see an exclamation icon in the title and URL fields', () => {
       cy.verify_title_color()
     })
+
+    Then("I should see a check icon in the title field", function () {
+      cy.verify_title_color_success();
+    });
+
+    Then("I can hit enter to submit the form", function () {
+      cy.hit_enter_key();
+    });
+
+    Then("the list of registered images should be updated with the new item", function () { 
+      cy.validate_card_list();
+    });
+
+    Then("the new item should be stored in the localStorage", function () { 
+      cy.validate_local_storage_item();
+    });
+
+    Then("The inputs should be cleared", function () {
+      cy.clearAllLocalStorage();
+    });
+
+
+

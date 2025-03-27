@@ -1,9 +1,12 @@
-import elements from '../pageObjects/uploadImagePage'
+import 'cypress-localstorage-commands'
+
+import elements from '../pageObjects/uploadImagePage';
+
 
 
 const colors = {
     errors: 'rgb(220, 53, 69)',
-    success: ''
+    success: '#198751'
   }
     Cypress.Commands.add('open_web_page', () => {
         cy.visit('/')
@@ -15,7 +18,7 @@ const colors = {
       })
 
       Cypress.Commands.add('insert_text_imgTitle', (inputTitle) => {
-        cy.get(elements.imageUrlInput).type(`${inputTitle}`)
+        cy.get(elements.titleInput).type(`${inputTitle}`)
       })
 
       Cypress.Commands.add('click_submit_button', () => {
@@ -32,4 +35,20 @@ const colors = {
 
       Cypress.Commands.add('verify_title_color', () => {
         cy.get(elements.titleInput).should("have.css", "border-right-color", colors.errors);
-    })
+      })
+
+      Cypress.Commands.add('verify_title_color_success', () => {
+        cy.get(elements.titleInput).should("have.css", "broder-right-color", colors.success);
+      })
+
+      Cypress.Commands.add('hit_enter_key', () => {
+        cy.get(elements.imageUrlInput).type('Cypress.io{enter}');
+      })
+
+      Cypress.Commands.add('validate_card_list', () => {
+        cy.get(elements.cardList).should("contain", "Alien BR");
+      })
+      
+      Cypress.Commands.add('validate_local_storage_item', () =>{
+        cy.getLocalStorage("tdd-ew-db").should("contain", "Alien BR");
+      })

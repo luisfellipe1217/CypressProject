@@ -3,6 +3,7 @@ const elements = {
     titleFeedback: '#titleFeedback',
     imageUrlInput: '#imageUrl',
     imageUrlFeedback: '#urlFeedback',
-    submitBtn: "#btnSubmit"
+    submitBtn: "#btnSubmit",
+    cardList: "#card-list"
   }
 export default elements
