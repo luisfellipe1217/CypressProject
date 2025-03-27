@@ -1,70 +1,62 @@
 # Cypress Cucumber Project
 
-Este repositório contém um projeto de testes automatizados utilizando **Cypress** com **Cucumber** criado para pratica e estudos.
+This repository contains an automated testing project using **Cypress** with **Cucumber**.
 
-## Estrutura do Projeto
+## Project Structure
 
 ```
 Cypress/
-│── app/               # Contém os arquivos de Steps do Cucumber
-│── PageObjects/       # Contém os arquivos de Page Objects (locators das páginas)
-│── Support/           # Contém comandos customizados e configurações
-│   ├── commands.js    # Arquivo para comandos personalizados
-│   ├── e2e.js         # Arquivo de configuração global do Cypress
-│── features/          # Contém os arquivos .feature do Cucumber
+│── app/               # Contains Cucumber Step Definitions
+│── PageObjects/       # Contains Page Object files (page locators)
+│── Support/           # Contains custom commands and configurations
+│   ├── commands.js    # File for custom commands
+│   ├── e2e.js         # Global Cypress configuration file
+│── features/          # Contains .feature files for Cucumber
 .github/
 │── workflows/
-│   ├── cypressproject.yml  # Configuração para execução na pipeline do GitHub Actions
+│   ├── cypressproject.yml  # Configuration for running tests in GitHub Actions pipeline
 ```
 
-## Requisitos
+## Requirements
 
 - **Node.js** v22.14.0
-- **Cypress** instalado globalmente ou via projeto
-- **Cucumber Preprocessor** para Cypress
+- **Cypress** installed globally or via project
+- **Cucumber Preprocessor** for Cypress
 
-## Instalação
+## Installation
 
-1. Clone o repositório:
+1. Clone the repository:
    ```sh
-   git clone https://github.com/seu-usuario/seu-repositorio.git
-   cd seu-repositorio
+   git clone https://github.com/luisfellipe1217/CypressProject.git
+   cd CypressProject
    ```
 
-2. Instale as dependências:
+2. Install dependencies:
    ```sh
    npm install
    ```
 
-## Execução dos Testes
+## Running Tests
 
-- Para executar os testes localmente via interface gráfica:
+- To run tests locally using the graphical interface:
   ```sh
   npx cypress open
   ```
 
-- Para executar os testes em modo headless:
+- To run tests in headless mode:
   ```sh
   npx cypress run
   ```
 
-## Integração com GitHub Actions
+## GitHub Actions Integration
 
-O projeto está configurado para execução automática na pipeline do **GitHub Actions**. O workflow definido no arquivo `.github/workflows/cypressproject.yml` executa os testes sempre que um push é feito no repositório.
+The project is configured to run automatically in the **GitHub Actions** pipeline. The workflow defined in `.github/workflows/cypressproject.yml` executes tests whenever a push is made to the repository.
 
-## Estrutura dos Testes
+## Test Structure
 
-- **Features**: Arquivos `.feature` escritos em Gherkin
-- **Steps**: Implementação dos passos dentro da pasta `Cypress/app/`
-- **Page Objects**: Definição de locators e interações com as páginas na pasta `Cypress/PageObjects/`
-- **Comandos customizados**: Definição de comandos personalizados em `Cypress/Support/commands.js`
+- **Features**: `.feature` files written in Gherkin
+- **Steps**: Step definitions implemented inside `Cypress/app/`
+- **Page Objects**: Definition of locators and interactions with pages in `Cypress/PageObjects/`
+- **Custom Commands**: Defined in `Cypress/Support/commands.js`
 
-## Contribuição
-
-1. Faça um fork do projeto
-2. Crie um branch para sua funcionalidade (`git checkout -b minha-feature`)
-3. Commit suas alterações (`git commit -m 'Adiciona nova funcionalidade'`)
-4. Faça o push do branch (`git push origin minha-feature`)
-5. Abra um Pull Request
-
-
+## Contributio
