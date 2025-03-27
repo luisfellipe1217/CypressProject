@@ -16,6 +16,9 @@ export default defineConfig({
       return config;
     },
     baseUrl: 'https://erickwendel.github.io/vanilla-js-web-app-example/',
-    specPattern: "cypress/*.feature",
+    specPattern: "cypress/features/*.feature",
+  },
+  env: {
+    stepDefinitions: "cypress/stepDefinitions/*.js", 
   },
 });

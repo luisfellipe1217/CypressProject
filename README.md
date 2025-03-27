@@ -6,9 +6,9 @@ This repository contains an automated testing project using **Cypress** with **C
 
 ```
 Cypress/
-│── app/               # Contains Cucumber Step Definitions
-│── PageObjects/       # Contains Page Object files (page locators)
-│── Support/           # Contains custom commands and configurations
+│── stepDefinitions/   # Contains Cucumber Step Definitions
+│── pageObjects/       # Contains Page Object files (page locators)
+│── support/           # Contains custom commands and configurations
 │   ├── commands.js    # File for custom commands
 │   ├── e2e.js         # Global Cypress configuration file
 │── features/          # Contains .feature files for Cucumber
