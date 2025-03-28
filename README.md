@@ -1,6 +1,7 @@
 # Cypress Cucumber Project
 
-This repository contains an automated testing project using **Cypress** with **Cucumber**.
+This repository contains an automated testing project using **Cypress** with **Cucumber** used for training skills using cypress functions for validate text, lists, css elements, and localstorage.
+The page used for creating the tests is a basic image upload page where you can upload images by providing an Image URL and Title.
 
 ## Project Structure
 
