@@ -56,7 +56,7 @@ The project is configured to run automatically in the **GitHub Actions** pipelin
 ## Test Structure
 
 - **Features**: `.feature` files written in Gherkin
-- **Steps**: Step definitions implemented inside `Cypress/app/`
+- **Steps**: Step definitions implemented inside `Cypress/stepDefinitions/`
 - **Page Objects**: Definition of locators and interactions with pages in `Cypress/PageObjects/`
 - **Custom Commands**: Defined in `Cypress/Support/commands.js`
 
