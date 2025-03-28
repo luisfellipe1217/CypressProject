@@ -16,6 +16,7 @@ const imgInfo = {
       cy.insert_text_imgTitle(imgInfo.imgTitle)
       cy.insert_text_imgUrl(imgInfo.imgUrl)
       cy.click_submit_button()
+      cy.validate_card_list()
     });
 
     When("I don't enter anything in the title field", () => { });
